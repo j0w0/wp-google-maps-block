@@ -13,7 +13,7 @@ Allows the user to customize and set:
 - Block background color/image
 - Block padding
 
-Uses [Google Maps JavaScript API](https://developers.google.com/maps/documentation/javascript) for front-end view and [react-google-maps](https://visgl.github.io/react-google-maps/) for admin/full site editing.
+Uses <a href="https://developers.google.com/maps/documentation/javascript" target="_blank">Google Maps JavaScript API</a> for front-end view and <a href="https://visgl.github.io/react-google-maps/" target="_blank">react-google-maps</a> for admin/full site editing.
 
 ## Environment Variable
 
