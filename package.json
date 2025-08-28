@@ -1,0 +1,22 @@
+{
+	"name": "j0w0-google-maps-block",
+	"version": "0.1.0",
+	"description": "Custom Google Maps block for full site editing.",
+	"author": "j0w0",
+	"main": "build/index.js",
+	"scripts": {
+		"build": "wp-scripts build --blocks-manifest",
+		"format": "wp-scripts format",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"packages-update": "wp-scripts packages-update",
+		"plugin-zip": "wp-scripts plugin-zip",
+		"start": "wp-scripts start --blocks-manifest"
+	},
+	"devDependencies": {
+		"@wordpress/scripts": "^30.21.0"
+	},
+	"dependencies": {
+		"@vis.gl/react-google-maps": "^1.5.5"
+	}
+}

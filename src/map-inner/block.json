@@ -1,0 +1,70 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "j0w0/map-inner",
+	"version": "0.1.0",
+	"title": "Google Map Inner Block",
+	"category": "j0w0",
+	"icon": "smiley",
+	"description": "Inner block for Google Map block.",
+	"parent": ["j0w0/google-map"],
+	"example": {},
+	"supports": {
+		"background": {
+			"backgroundImage": true,
+			"backgroundPosition": true,
+			"backgroundSize": true
+		},
+		"color": {
+			"background": true,
+			"text": false
+		},
+		"spacing": {
+			"padding": true
+		},
+		"lock": false
+	},
+	"attributes": {
+		"zoom_level": {
+			"type": "number",
+			"default": 9
+		},
+		"center_lat": {
+			"type": "number",
+			"default": 30.274403456356957
+		},
+		"center_lng": {
+			"type": "number",
+			"default": -97.74274291374772
+		},
+		"map_height": {
+			"type": "number",
+			"default": 400
+		},
+		"map_theme": {
+			"type": "string",
+			"default": "default"
+		},
+		"show_zoom_controls": {
+			"type": "boolean",
+			"default": true
+		},
+		"map_markers": {
+			"type": "array",
+			"default": [
+				{
+					"label": "This is the label",
+					"position": {
+						"lat": 30.274403456356957,
+						"lng": -97.74274291374772
+					},
+					"image": null
+				}
+			]
+		}
+	},
+	"textdomain": "google-map-inner",
+	"style": "file:./style-index.css",
+	"editorScript": "file:./index.js",
+	"viewScript": "file:./view.js"
+}

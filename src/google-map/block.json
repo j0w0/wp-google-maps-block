@@ -1,0 +1,18 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "j0w0/google-map",
+	"version": "0.1.0",
+	"title": "Google Map",
+	"category": "j0w0",
+	"icon": "smiley",
+	"description": "Google Map block.",
+	"example": {},
+	"supports": {
+		"align": true
+	},
+	"attributes": {},
+	"textdomain": "google-map",
+	"editorScript": "file:./index.js",
+	"viewScript": "file:./view.js"
+}
