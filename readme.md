@@ -1,6 +1,6 @@
 # Google Maps Block
 
-Custom Google Maps block for full site editing.
+Custom Google Maps block for Wordpress full site editing.
 
 ## Environment Variables
 

@@ -2,7 +2,7 @@
 
 /**
  * Plugin Name:       j0w0 Google Maps Block
- * Description:       Custom Google Maps block for full site editing.
+ * Description:       Custom Google Maps block for Wordpress full site editing.
  * Author:            j0w0
  * Author URI:        https://www.j0w0.com
  */

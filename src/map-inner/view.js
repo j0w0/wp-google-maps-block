@@ -25,15 +25,26 @@ const j0w0GoogleMapsInit = (map) => {
 
 	if (mapMarkers.length > 0) {
 		mapMarkers.forEach((marker) => {
-			new google.maps.Marker({
-				// icon: {
-				// 	path: google.maps.SymbolPath.CIRCLE,
-				// 	scale: 10,
-				// },
-				label: marker.label,
+			const contentString = `<div class="j0w0-gm-info-window">
+				${marker.label}
+			</div>`;
+
+			const infoWindow = new google.maps.InfoWindow({
+				ariaLabel: marker.label,
+				content: contentString,
+				headerDisabled: true,
+				maxWidth: 200,
+			});
+
+			const mapMarker = new google.maps.Marker({
 				map: googleMap,
 				position: marker.position,
 				title: marker.label,
+			});
+
+			infoWindow.open({
+				anchor: mapMarker,
+				map: googleMap,
 			});
 		});
 	}

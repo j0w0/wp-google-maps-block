@@ -11,7 +11,13 @@ import {
 	RadioControl,
 } from "@wordpress/components";
 // import { MediaUpload } from "@wordpress/block-editor";
-import { APIProvider, Map, Marker } from "@vis.gl/react-google-maps";
+import {
+	APIProvider,
+	Map,
+	Marker,
+	InfoWindow,
+	useMarkerRef,
+} from "@vis.gl/react-google-maps";
 import { STYLES_MAPPING } from ".";
 
 export default function Edit({ attributes, setAttributes }) {
@@ -305,28 +311,36 @@ export default function Edit({ attributes, setAttributes }) {
 							styles={STYLES_MAPPING[map_theme].styles}
 						>
 							{mapMarkers.map((marker, idx) => {
+								const [markerRef, marker2] = useMarkerRef();
+
 								return (
-									<Marker
-										draggable
-										label={marker.label}
-										position={marker.position}
-										onDragEnd={(event) => {
-											const markerCenter = event.latLng;
+									<>
+										<Marker
+											ref={markerRef}
+											draggable
+											position={marker.position}
+											onDragEnd={(event) => {
+												const markerCenter = event.latLng;
 
-											setMapMarkers((previousMarkers) => {
-												const newMarkers = [...previousMarkers];
+												setMapMarkers((previousMarkers) => {
+													const newMarkers = [...previousMarkers];
 
-												newMarkers[idx] = {
-													...newMarkers[idx],
-													position: markerCenter,
-												};
+													newMarkers[idx] = {
+														...newMarkers[idx],
+														position: markerCenter,
+													};
 
-												setAttributes({ map_markers: newMarkers });
+													setAttributes({ map_markers: newMarkers });
 
-												return newMarkers;
-											});
-										}}
-									/>
+													return newMarkers;
+												});
+											}}
+										/>
+
+										<InfoWindow anchor={marker2} headerDisabled maxWidth={200}>
+											{marker.label}
+										</InfoWindow>
+									</>
 								);
 							})}
 						</Map>

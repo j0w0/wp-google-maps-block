@@ -1,7 +1,7 @@
 {
 	"name": "j0w0-google-maps-block",
 	"version": "0.1.0",
-	"description": "Custom Google Maps block for full site editing.",
+	"description": "Custom Google Maps block for Wordpress full site editing.",
 	"author": "j0w0",
 	"main": "build/index.js",
 	"scripts": {
