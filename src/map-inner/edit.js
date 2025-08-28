@@ -145,7 +145,7 @@ export default function Edit({ attributes, setAttributes }) {
 					<RangeControl
 						__next40pxDefaultSize
 						__nextHasNoMarginBottom
-						help="Please select zoom level for map"
+						help="Select zoom level for map"
 						initialPosition={10}
 						label="Zoom Level"
 						max={20}
@@ -177,6 +177,7 @@ export default function Edit({ attributes, setAttributes }) {
 					<TextControl
 						__next40pxDefaultSize
 						__nextHasNoMarginBottom
+						help="Drag map marker to specific location"
 						label="Title"
 						onChange={(value) => {
 							setMapMarkers((previousMarkers) => {

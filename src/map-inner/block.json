@@ -27,7 +27,7 @@
 	"attributes": {
 		"zoom_level": {
 			"type": "number",
-			"default": 9
+			"default": 11
 		},
 		"center_lat": {
 			"type": "number",
@@ -53,10 +53,10 @@
 			"type": "array",
 			"default": [
 				{
-					"label": "This is the label",
+					"label": "Texas State Capital Building",
 					"position": {
-						"lat": 30.274403456356957,
-						"lng": -97.74274291374772
+						"lat": 30.273925639947954,
+						"lng": -97.74065615513413
 					},
 					"image": null
 				}
